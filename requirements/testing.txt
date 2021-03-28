@@ -1,0 +1,13 @@
+-r base.txt
+
+factory-boy==2.11.1
+pylint
+pytest==4.3.1
+pytest-cov==2.6.1
+pytest-env==0.6.2
+pytest-spec==1.1.0
+pytest-mock==1.10.2
+pytest-flask==0.15.1
+pytest-factoryboy==2.0.2
+freezegun==0.3.12
+Werkzeug==0.16.1

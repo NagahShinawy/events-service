@@ -1,0 +1,15 @@
+flask
+flask-restful
+flask-migrate
+flask-sqlalchemy
+flask-marshmallow==0.11.0
+marshmallow-sqlalchemy
+marshmallow==3.5.0
+python-dotenv
+passlib
+psycopg2-binary
+connexion[swagger-ui]
+Flask-JWT-Extended
+celery==4.3.0
+vine<5.0.0a1,>=1.1.3
+redis==3.3.11
