@@ -1,6 +1,6 @@
 from flask import Flask
 from extensions import db, migrate, jwt
-from api.views.views import api_bp
+from api.views import root_bp, api_bp
 
 
 def create_app(config_filename):
@@ -8,7 +8,7 @@ def create_app(config_filename):
     app.config.from_object(config_filename)
     configure_extensions(app)
     configure_jwt(app)
-    app.register_blueprint(api_bp, url_prefix="/api/v1")  # localhost/api/
+    register_blueprints(app)
 
     return app
 
@@ -21,3 +21,9 @@ def configure_extensions(app):
 
 def configure_jwt(app):
     jwt.init_app(app)
+
+
+def register_blueprints(app):
+    """ Registers all blueprints for application """
+    app.register_blueprint(root_bp)
+    app.register_blueprint(api_bp)
